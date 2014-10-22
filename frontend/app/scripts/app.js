@@ -28,6 +28,9 @@ angular
       .when('/projects/:projectId', {
         templateUrl: 'views/project.html',
         controller: 'ProjectCtrl'
+      .when('/signup', {
+        templateUrl: 'views/signup.html',
+        controller: 'SignupCtrl'
       })
       .otherwise({
         redirectTo: '/'
