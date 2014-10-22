@@ -8,10 +8,12 @@
  * Controller of the environmentWashApp
  */
 angular.module('environmentWashApp')
-  .controller('SignupCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+  .controller('SignupCtrl', ['$scope', '$location', function ($scope, $location) {
+    $scope.createUser = function(user) {
+      console.log('TODO: actually create the user...', user);
+    };
+
+    $scope.cancel = function() {
+      $location.url('/'); // TODO: Should this go to index or back a page?
+    };
+  }]);

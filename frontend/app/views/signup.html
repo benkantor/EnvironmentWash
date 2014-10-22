@@ -1,1 +1,9 @@
-<p>This is the signup view.</p>
+<div ng-controller="SignupCtrl">
+  <form novalidate class="simple-form">
+    <label for="username">Username:</label>
+    <input type="text" name="username" ng-model="user.username" />
+
+    <button ng-click="cancel()">Cancel</button>
+    <button ng-click="createUser(user)">Create User</button>
+  </form>
+</div>
