@@ -3,6 +3,19 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
 // endbower
 
+.navbar {
+  background: #5cb85c;
+}
+
+.header .navbar-brand,
+.header .navbar-nav li a{
+  color: white;
+}
+
+.header a {
+  color: white;
+}
+
 .browsehappy {
   margin: 0.2em 0;
   background: #ccc;
@@ -26,15 +39,7 @@ body {
 
 /* Custom page header */
 .header {
-  border-bottom: 1px solid #e5e5e5;
-
-  /* Make the masthead heading the same height as the navigation */
-  h3 {
-    margin-top: 0;
-    margin-bottom: 0;
-    line-height: 40px;
-    padding-bottom: 19px;
-  }
+  
 }
 
 /* Custom page footer */
