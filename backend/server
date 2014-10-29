@@ -1,16 +1,26 @@
 #!/usr/bin/python
 from BaseHTTPServer import BaseHTTPRequestHandler,HTTPServer
 from os import curdir, sep
+from cgi import parse_header, parse_multipart
+from urlparse import parse_qs
 
-PORT_NUMBER = 8080
+PORT_NUMBER = 3003
 
 #This class will handles any incoming request from
 #the browser 
 class myHandler(BaseHTTPRequestHandler):
 	
+	def do_POST(self):
+		if self.path == "/login":
+			length = int(self.headers['content-length'])
+ 			ctype, pdict = parse_header(self.headers['content-type'])
+ 			postvars = parse_qs(self.rfile.read(length), keep_blank_values=1)
+ 			print postvars
+
 	#Handler for the GET requests
 	def do_GET(self):
-		if self.path=="/":
+		if self.path=="/test":
+			
 			self.path="/index_example2.html"
 
 		try:
@@ -48,6 +58,22 @@ class myHandler(BaseHTTPRequestHandler):
 		except IOError:
 			self.send_error(404,'File Not Found: %s' % self.path)
 
+
+import json
+class BallinFileManager:
+
+
+	def writeFile(self, name, data):
+		with open(name, 'w') as outfile:
+			json.dump(data, outfile)
+
+	def readFile(self, name):
+		jsonData = open(name)
+		data = json.load(jsonData)
+		jsonData.close()
+		return data
+
+'''
 try:
 	#Create a web server and define the handler to manage the
 	#incoming request
@@ -60,3 +86,5 @@ try:
 except KeyboardInterrupt:
 	print '^C received, shutting down the web server'
 	server.socket.close()
+
+	'''
