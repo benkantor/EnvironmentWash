@@ -8,10 +8,8 @@
  * Controller of the environmentWashApp
  */
 angular.module('environmentWashApp')
-  .controller('MainCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+  .controller('MainCtrl', ['$scope','Project',
+    function ($scope,Project) {
+      $scope.projects = Project.query();
+    }
+  ]);

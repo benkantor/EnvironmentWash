@@ -59,3 +59,16 @@ body {
     border-bottom: 0;
   }
 }
+
+
+.project-row {
+  max-width: 730px;
+  height:40px;
+  line-height:40px;
+  display: table;
+  button {
+    display: table-cell;
+    background: white;
+    outline: none;
+  }
+}
