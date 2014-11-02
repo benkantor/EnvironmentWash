@@ -1,0 +1,17 @@
+{
+  "id" : "project-one",
+  "name" : "Ramset Park Cleanup",
+  "date" : "Septmeber 30th 2014",
+  "location" : "Rochester, NY",
+  "starttime" : "2:00 PM",
+  "endtime" : "4:00 PM",
+  "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eleifend, nisi ac lobortis luctus, sapien tortor semper risus, a gravida nulla metus quis arcu. Sed eget sem in arcu semper egestas. Pellentesque vitae lectus et nulla pellentesque venenatis. Pellentesque varius euismod purus, quis pellentesque nulla placerat quis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Cras blandit justo at lorem finibus, non consectetur ligula dictum. Sed quis leo lectus. Donec ac mollis quam. Nullam et metus ac turpis dignissim fringilla at ac orci. Praesent maximus placerat commodo. Morbi nec bibendum nulla.",
+  "volunteers" : [
+    {
+      "name" : "Ben K."
+    },
+    {
+      "name" : "Matt S."
+    }
+  ]
+}
