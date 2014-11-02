@@ -10,7 +10,7 @@
 angular.module('environmentWashApp')
   .controller('SignupCtrl', ['$scope', '$location', function ($scope, $location) {
     $scope.createUser = function(user) {
-      console.log('TODO: actually create the user...', user);
+      $location.url('/');
     };
 
     $scope.cancel = function() {
