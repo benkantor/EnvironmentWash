@@ -1,17 +1,20 @@
 [
   {
+    "id": "project-two",
     "name" : "Highway 31 Litter Removal",
-    "date" : "10-15-15",
+    "date" : "October 10th 2014",
     "location" : "Rochester, NY"
   },
   {
+    "id": "project-one",
     "name" : "Ramset Park Cleanup",
-    "date" : "09-27-15",
+    "date" : "Septmeber 27th, 2014",
     "location" : "Rochester, NY"
   },
   {
+    "id": "project-three",
     "name" : "Genesee Valley Cleanup Day",
-    "date" : "09-30-15",
+    "date" : "Septmeber 30th 2014",
     "location" : "Rochester, NY"
   }
 ]
