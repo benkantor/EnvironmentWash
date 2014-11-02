@@ -10,7 +10,7 @@
 angular.module('environmentWashApp')
   .controller('CreateProjectCtrl', ['$scope', '$location', function ($scope, $location) {
     $scope.createProject = function(project) {
-      console.log('Actually create a project...', project);
+      $location.url('/');
     };
 
     $scope.cancel = function() {
