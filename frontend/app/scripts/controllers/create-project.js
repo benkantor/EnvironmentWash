@@ -8,10 +8,12 @@
  * Controller of the environmentWashApp
  */
 angular.module('environmentWashApp')
-  .controller('CreateProjectCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+  .controller('CreateProjectCtrl', ['$scope', '$location', function ($scope, $location) {
+    $scope.createProject = function(project) {
+      console.log('Actually create a project...', project);
+    };
+
+    $scope.cancel = function() {
+      $location.url('/');
+    };
+  }]);
