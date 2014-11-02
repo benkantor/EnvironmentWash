@@ -29,6 +29,14 @@ angular
         templateUrl: 'views/project.html',
         controller: 'ProjectCtrl'
       })
+      .when('/create-project', {
+        templateUrl: 'views/create-project.html',
+        controller: 'CreateProjectCtrl'
+      })
+      .when('/signup', {
+        templateUrl: 'views/signup.html',
+        controller: 'SignupCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
