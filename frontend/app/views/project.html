@@ -1,0 +1,20 @@
+<div class="project-details">
+  <h1> {{project.name}} </h1>
+  <h3> {{project.date}}</h3> 
+  <h3> {{project.starttime}} to {{project.endtime}} </h3>
+  <h3> {{project.location}} </h3>
+  <hr>
+  <h3> Description <h3>
+  <p>{{ project.description }}<p>
+  <hr>
+  <div class="row">
+    <div>
+      <h3> Volunteers <h3>
+      <ul>
+        <li ng-repeat="volunteer in project.volunteers">{{volunteer.name}}</li>
+      </ul>
+    </div>
+    <div>
+      <a class="btn btn-lg btn-success" ng-href="#">Volunteer!</a>
+    </div>
+</div>
