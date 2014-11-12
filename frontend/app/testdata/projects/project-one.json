@@ -13,5 +13,13 @@
     {
       "name" : "Matt S."
     }
+  ],
+  "comments": [
+    {
+      "name": "John Doe",
+      "date": "September 23rd, 2014",
+      "body": "Thanks for cleaning the park"
+    }
   ]
+
 }

@@ -1,6 +1,6 @@
 <div class="project-details">
   <h1> {{project.name}} </h1>
-  <h3> {{project.date}}</h3> 
+  <h3> {{project.date}}</h3>
   <h3> {{project.starttime}} to {{project.endtime}} </h3>
   <h3> {{project.location}} </h3>
   <hr>
@@ -17,4 +17,11 @@
     <div>
       <a class="btn btn-lg btn-success" ng-href="#">Volunteer!</a>
     </div>
+    <hr>
+    <div>
+      <h3> <span class="glyphicon glyphicon-comments"></span> Comments </h3>
+      <div ng-repeat="comment in project.comments">
+        <p> {{comment.name}} <span class="text-muted"> {{comment.date}} </span> </p>
+        <p> {{comment.body}} </p>
+      </div>
 </div>
