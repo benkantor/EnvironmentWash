@@ -15,6 +15,17 @@ module.exports = {
     })
   },
 
+  getUserByUsername: function(req,res,next) {
+    var uname = req.params.username;
+    UserModel.find({username: uname}, function(err,user){
+      if (!err) {
+        return res.send(user);
+      } else {
+        return handleError(err);
+      }
+    })
+  },
+
   createUser: function(req,res,next) {
     var newUser = new UserModel(req.body);
     newUser.save( function (err,user,numAffected){
