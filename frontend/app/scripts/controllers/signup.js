@@ -8,9 +8,24 @@
  * Controller of the environmentWashApp
  */
 angular.module('environmentWashApp')
-  .controller('SignupCtrl', ['$scope', '$location', function ($scope, $location) {
-    $scope.createUser = function(user) {
-      $location.url('/');
+  .controller('SignupCtrl', ['$scope', '$location', '$http', function ($scope, $location, $http) {
+    $scope.createUser = function() {
+      var data = {
+        first_name: $scope.first_name,
+        last_name: $scope.last_name,
+        username: $scope.username,
+        email: $scope.email,
+        phone_number: $scope.phone_number,
+        password: $scope.password
+      };
+      $http.post('http://localhost:3000/api/user', data).
+        success(function (data,status,headers,config){
+          alert("User Created!");
+          $location.url('/');
+        }).
+        error(function (data,status,headers,config){
+          alert("Error");
+        });
     };
 
     $scope.cancel = function() {
