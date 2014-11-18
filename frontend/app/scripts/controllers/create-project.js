@@ -9,7 +9,7 @@
  */
 angular.module('environmentWashApp')
   .controller('CreateProjectCtrl', ['$scope', '$location', function ($scope, $location) {
-    $scope.createProject = function(project) {
+    $scope.createProject = function() {
       $location.url('/');
     };
 

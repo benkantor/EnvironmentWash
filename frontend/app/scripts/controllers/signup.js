@@ -20,11 +20,9 @@ angular.module('environmentWashApp')
       };
       $http.post('http://localhost:3000/api/user', data).
         success(function (data,status,headers,config){
-          alert("User Created!");
           $location.url('/');
         }).
         error(function (data,status,headers,config){
-          alert("Error");
         });
     };
 
