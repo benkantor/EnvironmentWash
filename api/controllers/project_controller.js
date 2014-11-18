@@ -27,23 +27,23 @@ module.exports = {
   },
 
   addComment: function(req,res,next) {
-    // ProjectModel.update({title: req.body.title}, req.body, function (err,numAffected,response){
-    //   if (! err) {
-    //     return res.send(response);
-    //   } else {
-    //     return handleError(err);
-    //   }
-    // }); Shit if I know what I'm doing...
+    ProjectModel.update({title: req.body.title}, req.body.comments.append(req.body.comment), function (err,numAffected,response){
+      if (! err) {
+        return res.send(response);
+      } else {
+        return handleError(err);
+      }
+    });
   },
 
   addVolunteer: function(req,res,next) {
-    // ProjectModel.update({title: req.body.title, function (err){
-    //   if (!err) {
-    //     return res.send("Success");
-    //   } else {
-    //     return handleError(err);
-    //   }
-    // }) Shit if I know what I'm doing...
+    ProjectModel.update({title: req.body.title}, req.body.volunteers.append(req.body.volunteer), function (err,numAffected,response){
+      if (! err) {
+        return res.send(response);
+      } else {
+        return handleError(err);
+      }
+    });
   }
 
 };
