@@ -20,6 +20,7 @@
     <hr>
     <div>
       <h3> Comments </h3>
+      <a ng-click="gotoCommentbox()"> Add a Comment </a>
       <div ng-repeat="comment in project.comments">
         <p> {{comment.name}} <span class="text-muted"> {{comment.date}} </span> </p>
         <p> {{comment.body}} </p>
