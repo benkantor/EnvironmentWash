@@ -8,8 +8,9 @@
  * Controller of the environmentWashApp
  */
 angular.module('environmentWashApp')
-  .controller('MainCtrl', ['$scope','Project',
-    function ($scope,Project) {
+  .controller('MainCtrl', ['$scope','Project', 'Session',
+    function ($scope,Project,Session) {
       $scope.projects = Project.query();
+      $scope.session = Session;
     }
   ]);

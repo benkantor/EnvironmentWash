@@ -1,11 +1,11 @@
-<div class="jumbotron">
+<div class="jumbotron" ng-hide="session.loggedIn">
   <h2>Welcome!</h2>
   <p class="lead">
     EnvironmentWash is a place to discover and plan environmental cleanup efforts in your local area.
   </p>
   <p>
     <a class="btn btn-lg btn-success" ng-href="#signup">Create Account</a>
-    <a class="btn btn-lg btn-success" ng-href="#">Login</a>
+    <a class="btn btn-lg btn-success" ng-href="#login">Login</a>
   </p>
 </div>
 
@@ -17,3 +17,4 @@
 <div class="project-list">
   <h2> Local Projects </h2>
 </div>
+{{ session }}
