@@ -2,12 +2,17 @@ var express = require('express');
 var router = express.Router();
 var projectsController = require("../controllers/project_controller.js");
 
-/* GET users listing. */
 router.route("/")
 .get(projectsController.getProjects)
-.post(projectsController.createProject)
-.post(projectsController.addComment)
-.post(projectsController.addVolunteer)
+.post(projectsController.createProject);
 
+router.route("/:id")
+.get(projectsController.getProjectById)
+
+router.route("/:id/volunteer")
+.post(projectsController.addVolunteer);
+
+router.route("/:id/comment")
+.post(projectsController.addComment);
 
 module.exports = router;

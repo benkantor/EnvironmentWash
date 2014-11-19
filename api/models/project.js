@@ -8,8 +8,8 @@ var projectSchema = new Schema({
   date: Date,
   location: String,
   createdBy: String,
-  volunteers: [String],
-  comments: [{created:date, comment:String, createdBy:String}]
+  volunteers: [{name: String}],
+  comments: [{created: Date, comment: String, createdBy: String}]
 });
 
 mongoose.model("Project", projectSchema);
