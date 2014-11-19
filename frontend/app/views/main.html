@@ -9,12 +9,12 @@
   </p>
 </div>
 
-<div class="project-list">
+<div class="project-list" ng-show="session.loggedIn">
   <h2> My Projects </h2>
   <div project-details ng-repeat="project in projects"></div>
 </div>
 
 <div class="project-list">
-  <h2> Local Projects </h2>
+  <h2> Local Projects near Rochester NY</h2>
+  <div project-details ng-repeat="project in local"></div>
 </div>
-{{ session }}
