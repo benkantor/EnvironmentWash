@@ -21,7 +21,7 @@ angular.module('environmentWashApp')
         createdBy: (userdata.first_name + ' ' + userdata.last_name),
         volunteers: [],
         comments: []
-      }
+      };
       $http.post('http://localhost:3000/api/project',project).
         success(function (data,status,headers,config) {
           $location.url('/');
