@@ -2,7 +2,7 @@
   <div class="row">
     <h1> {{project.name}} </h1>
     <h3> {{project.date}}</h3>
-    <h3> {{project.starttime}} to {{project.endtime}} </h3>
+    <h3> {{project.startTime}} to {{project.endTime}} </h3>
     <h3> {{project.location}} </h3>
   </div>
   <hr />
@@ -16,15 +16,15 @@
     <ul>
       <li ng-repeat="volunteer in project.volunteers">{{volunteer.name}}</li>
     </ul>
-    <a class="btn btn-lg btn-success" ng-href="#">Volunteer!</a>
+    <a class="btn btn-lg btn-success" ng-show="session.loggedIn" ng-click="volunteer()">Volunteer!</a>
   </div>
   <hr />
   <div class="row">
     <h3> Comments </h3>
     <a ng-click="gotoCommentbox()"> Add a Comment </a>
     <div ng-repeat="comment in project.comments">
-      <p> {{comment.name}} <span class="text-muted"> {{comment.date}} </span> </p>
-      <p> {{comment.body}} </p>
+      <p> {{comment.createdBy}} <span class="text-muted"> {{comment.created}} </span> </p>
+      <p> {{comment.comment}} </p>
     </div>
   </div>
   <hr />
@@ -34,14 +34,14 @@
         <!-- TODO: Make this disabled and filled in with the logged in user's info -->
         <label for="comment-name" class="col-sm-4 control-label"> Name: </label>
         <div class="col-sm-8">
-          <input type="text" class="form-control" name="comment-name" ng-model="comment.name" />
+          <input type="text" class="form-control" name="comment-name" ng-model="commentName" />
         </div>
       </div>
 
       <div class="form-group">
         <label for="comment-body" class="col-sm-4 control-label"> Comment: </label>
         <div class="col-sm-8">
-          <textarea class="form-control" name="comment-body" ng-model="comment.body" />
+          <textarea class="form-control" name="comment-body" ng-model="commentBody" />
         </div>
       </div>
 
@@ -50,7 +50,7 @@
           <button type="button" class="btn btn-default"
             ng-click="cancel()">Cancel</button>
           <button type="button" class="btn btn-success"
-            ng-click="addComment(comment)">Add Comment</button>
+            ng-click="comment()">Add Comment</button>
         </div>
       </div>
     </form>
