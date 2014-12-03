@@ -12,7 +12,6 @@ angular.module('environmentWashApp')
     $scope.createProject = function() {
       var userdata = $cookieStore.get('userdata');
       var project = {
-        name: $scope.name,
         date: $scope.date,
         startTime: $scope.start,
         endTime: $scope.end,
