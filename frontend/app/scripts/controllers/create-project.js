@@ -9,10 +9,10 @@
  */
 angular.module('environmentWashApp')
   .controller('CreateProjectCtrl', ['$scope', '$location', '$http', '$cookieStore', function ($scope, $location,$http,$cookieStore) {
+    $('[name="project-date"]').datepicker();
     $scope.createProject = function() {
       var userdata = $cookieStore.get('userdata');
       var project = {
-        name: $scope.name,
         date: $scope.date,
         startTime: $scope.start,
         endTime: $scope.end,
