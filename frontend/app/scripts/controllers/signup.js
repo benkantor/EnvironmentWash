@@ -18,7 +18,7 @@ angular.module('environmentWashApp')
         phone_number: $scope.phone_number,
         password: $scope.password
       };
-      $http.post('http://localhost:3000/api/user', data).
+      $http.post('http://104.131.177.161:3000/api/user', data).
         success(function (data,status,headers,config){
           $location.url('/');
         }).

@@ -12,7 +12,7 @@ angular.module('environmentWashApp')
     function ($scope,Project,Session,$http) {
       $scope.projects = Project.query();
       $scope.session = Session;
-      $http.get('http://localhost:3000/api/project').
+      $http.get('http://104.131.177.161:3000/api/project').
         success(function (data,status,headers,config){
           $scope.local = data;
         }).

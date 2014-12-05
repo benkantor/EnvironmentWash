@@ -7,7 +7,7 @@ angular.module('environmentWashApp')
       $scope.session = Session;
       $scope.volunteer = function(){
         var userdata = $cookieStore.get('userdata');
-        var url = 'http://localhost:3000/api/project/'+$scope.project._id+'/volunteer';
+        var url = 'http://104.131.177.161:3000/api/project/'+$scope.project._id+'/volunteer';
         var data = {
           name: (userdata.first_name + ' ' + userdata.last_name)
         };
@@ -22,7 +22,7 @@ angular.module('environmentWashApp')
 
       $scope.comment = function(){
         var userdata = $cookieStore.get('userdata');
-        var url = 'http://localhost:3000/api/project/'+$scope.project._id+'/comment';
+        var url = 'http://104.131.177.161:3000/api/project/'+$scope.project._id+'/comment';
         var data = {
           created: '2014-11-19',
           createdBy: (userdata.first_name + ' ' + userdata.last_name),
