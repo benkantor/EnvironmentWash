@@ -13,7 +13,7 @@ angular.module('environmentWashApp')
       loggedIn: ($cookieStore.get('loggedIn') || false),
       userdata: ($cookieStore.get('userdata') || {}),
       updateSession: function (username){
-        var query = 'http://localhost:3000/api/user/' + username;
+        var query = 'http://104.131.177.161:3000/api/user/' + username;
         $http.get(query).
           success(function (data){
             $cookieStore.put('userdata', data[0]);

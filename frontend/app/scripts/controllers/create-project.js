@@ -13,6 +13,7 @@ angular.module('environmentWashApp')
     $scope.createProject = function() {
       var userdata = $cookieStore.get('userdata');
       var project = {
+        name: $scope.name,
         date: $scope.date,
         startTime: $scope.start,
         endTime: $scope.end,
@@ -22,7 +23,7 @@ angular.module('environmentWashApp')
         volunteers: [],
         comments: []
       };
-      $http.post('http://localhost:3000/api/project',project).
+      $http.post('http://104.131.177.161:3000/api/project',project).
         success(function (data,status,headers,config) {
           $location.url('/');
         }).
