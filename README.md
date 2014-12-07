@@ -42,6 +42,11 @@ Users can ask questions about a project by posting a comment on a project page.
 To post a comment, simply navigate to the project page and use the new comment
 box found at the bottom of the page.
 
+### Create a project
+
+Users can create thier own project's by clicking the *Plan Project* button
+found in the navigation bar.
+
 ## Known Issues
 
 None currently
