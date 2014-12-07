@@ -1,19 +1,50 @@
 EnvironmentWash
 ===============
 
-EnvironmentWash project for SWEN-444 User Centered Requirements and Design
+Team project for SWEN-444 User Centered Requirements and Design.
 
-## Live Demo
+Environment Wash is a web application that addresses the needs of citizens who
+are concerned about environmental issues. The solution that Environment Wash
+will attempt to achieve is to raise awareness and encourage active volunteerism
+for environmental projects in a person’s local community. Environment Wash will
+achieve this by providing an online space where concerned citizens can create,
+organize and discover environmental projects in their local communities.
 
-You can play around with a live demo of the site at http://benkantor.github.io/EnvironmentWash
+## Demo
+
+You can play around with a live demo of the site [here](http://104.131.177.161:8000)
+
+## Usage
+
+Environment Wash supports the following functionality:
+
+### Signup / Create Account
+
+To access the full functionality of Environment Wash, user need to first make
+an account. To make an account simply click the *Create Account* Button on the
+home page and enter your information. Once you have an account you can log into
+the website by clicking the *Login* button and entering your username and
+password.
+
+### Search for projects
+
+Users can search for projects by either entering thier search criteria in the
+search box or by clicking the Discover button found in the navigation bar.
+
+### Sign up to volunteer for a project
+
+To sign up to volunteer for a project, simply navigate to the page of the 
+project and click *Volunteer*.
+
+### Post comments on a project page
+
+Users can ask questions about a project by posting a comment on a project page.
+To post a comment, simply navigate to the project page and use the new comment
+box found at the bottom of the page.
 
 ## Known Issues
 
-* Authentication is currently not implemented. Signing in or Creating an Account will login you in as a hard coded user.
-
-* Posting on project page message boards has not been implemented yet
-
-* A new project will not appear after filling out the create new product form.
+None currently
 
 
 ## Developing & Contributing
@@ -26,7 +57,8 @@ Install the following applications:
 * node
 * npm
 
-Once npm has been installed and configured, gloablly install the following node packages:
+Once npm has been installed and configured, gloablly install the following node
+packages:
 
 * grunt-cli
 * bower
