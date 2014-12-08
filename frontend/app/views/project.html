@@ -23,8 +23,9 @@
     <h3> Comments </h3>
     <a ng-click="gotoCommentbox()"> Add a Comment </a>
     <div ng-repeat="comment in project.comments">
-      <p> {{comment.createdBy}} <span class="text-muted"> {{comment.created}} </span> </p>
+      <p> <strong>{{comment.createdBy}}<strong> <span class="text-muted"> {{comment.created | date : fullDate}} </span> </p>
       <p> {{comment.comment}} </p>
+      <hr>
     </div>
   </div>
   <hr />
@@ -33,14 +34,13 @@
       <div class="form-group">
         <label for="comment-body" class="col-sm-4 control-label"> Comment: </label>
         <div class="col-sm-8">
-          <textarea class="form-control" name="comment-body" ng-model="commentBody" />
+          <textarea class="form-control" name="comment-body" ng-model="commentBody"></textarea>
         </div>
       </div>
 
       <div class="form-group">
         <div class="col-sm-offset-4 col-sm-8">
-          <button type="button" class="btn btn-success"
-            ng-click="comment()">Add Comment</button>
+          <button type="button" class="btn btn-success" ng-click="comment()">Add Comment</button>
         </div>
       </div>
     </form>
