@@ -3,7 +3,7 @@
     <a href="#/projects/{{project._id}}"> {{ project.name }} </a>
 
     <strong>Date: </strong>
-    {{ project.date }}
+    {{ project.date | date : longDate}}
 
 
     <strong>Location: </strong>

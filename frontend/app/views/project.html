@@ -1,7 +1,7 @@
 <div class="project-details">
   <div class="row">
     <h1> {{project.name}} </h1>
-    <h3> {{project.date}}</h3>
+    <h3> {{project.date | date : longDate}}</h3>
     <h3> {{project.startTime}} to {{project.endTime}} </h3>
     <h3> {{project.location}} </h3>
   </div>
